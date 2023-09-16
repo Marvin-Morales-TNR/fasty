@@ -5,7 +5,6 @@ name = "pypi"
 
 [scripts]
 server = "uvicorn app.main:app --reload"
-precommit = "pre-commit install"
 
 [packages]
 fastapi = "*"
