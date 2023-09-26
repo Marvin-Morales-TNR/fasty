@@ -28,7 +28,7 @@ async def register_route(
     request: Request, response: Response, body: RegisterRequest
 ) -> BaseResponse:
     try:
-        body.device_type = request.headers["user-agent"]
+        body.device = request.headers["user-agent"]
         body.ip_address = request.client[0]
         body.last_date = datetime.now().strftime("%Y-%m-%d")
         if controller.check_if_user_exists(body):

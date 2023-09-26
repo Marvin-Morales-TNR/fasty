@@ -19,6 +19,8 @@ pydantic = {extras = ["email"], version = "*"}
 pyjwt = "*"
 black = "*"
 pylint = "*"
+psycopg2-binary = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 colorama = "*"
