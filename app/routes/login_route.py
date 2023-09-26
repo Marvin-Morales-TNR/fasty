@@ -25,7 +25,6 @@ login_controller = LoginController(secret)
 async def login_route(
     request: Request, response: Response, body: LoginCredentials
 ) -> BaseResponse:
-    print("KKKK", body)
     try:
         if login_controller.check_if_user_exists(body.user_name):
             if token := login_controller.validate_credentials_login(body):
