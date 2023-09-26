@@ -4,8 +4,8 @@
 pip install pipenv
 
 # Crea un entorno virtual con Pipenv y activa el entorno
-pipenv install --deploy
 pipenv shell
+pipenv install --deploy
 
 # Ejecuta tu servidor
 uvicorn app.main:app --port 9000
