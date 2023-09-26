@@ -8,5 +8,5 @@ pipenv install --deploy
 pipenv shell
 
 # Ejecuta tu servidor
-pipenv run server
+uvicorn app.main:app --port 9000
 # uvicorn app.main:app --reload
