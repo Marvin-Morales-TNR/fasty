@@ -1,3 +1,61 @@
 {
-   "port": 8000
+   "port": 9000,
+   "context_prefix": "/auth",
+   "allowed_methods": ["*"],
+   "allowed_headers": ["Content-Type", "Authorization"],
+   "allow_origins": ["127.0.0.1", "localhost", "0.0.0.0"],
+   "routes": {
+      "register_route": {
+         "tags": ["Register"]
+      },
+      "login_route": {
+         "tags": ["Login"]
+      },
+      "credentials_route": {
+         "tags": ["Recovery"]
+      },
+      "token_validator": {
+         "tags": ["Token validation"]
+      },
+      "change_password": {
+         "tags": ["Recovery"]
+      },
+      "update_route": {
+         "tags": ["Update"]
+      }
+   },
+   "error_catalog": {
+      "general": {
+         "code": "GENERAL_ERROR",
+         "description": "There was an error while running the process"
+      },
+      "0": {
+         "code": "ERROR_USER_ALREADY_EXISTS",
+         "description": "The email used has been taken"
+      },
+      "1": {
+         "code": "ERROR_INCORRECT_PASSWORD",
+         "description": "The password provided is not correct"
+      },
+      "2": {
+         "code": "ERROR_USER_DOES_NOT_EXIST",
+         "description": "The user you are attempting to use doesn't exist"
+      },
+      "3": {
+         "code": "ERROR_AUTH_TOKEN_EXPIRED",
+         "description": "The authentication token is expired"
+      },
+      "4": {
+         "code": "ERROR_CANNOT_DECODE_TOKEN",
+         "description": "The token couldn't be decoded"
+      },
+      "5": {
+         "code": "ERROR_INVALID_TOKEN",
+         "description": "The token provided is not a valid JWT token"
+      },
+      "6": {
+         "code": "ERROR_BAD_CREDENTIALS_CANNOT_CHANGE_PASSWORD",
+         "description": "The token provided is not a valid JWT token"
+      }
+   }
 }

@@ -4,18 +4,21 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-server = "uvicorn app.main:app --reload"
+server = "uvicorn app.main:app --port 9000 --reload"
 
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
-autopep8 = "*"
-pydantic = "*"
-pylint = "*"
 python-dotenv = "*"
 sqlmodel = "*"
 mysql = "*"
 mysql-connector-python = "*"
+websockets = "*"
+fastapi-socketio = "*"
+pydantic = {extras = ["email"], version = "*"}
+pyjwt = "*"
+black = "*"
+pylint = "*"
 
 [dev-packages]
 colorama = "*"
